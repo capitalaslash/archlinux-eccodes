@@ -2,19 +2,19 @@
 # Contributor: Antonio Cervone <ant.cervone@gmail.com>
 
 pkgname=eccodes
-pkgver=2.18.0
+pkgver=2.19.0
 _attnum=45757960
 pkgrel=1
 pkgdesc="ECMWF decoding library for GRIB, BUFR and GTS"
 arch=('i686' 'x86_64')
 url="https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home"
 license=('Apache')
-depends=('libpng' 'netcdf')
+depends=(libpng netcdf ksh)
 optdepends=('libaec: for compression' 'jasper: as an alternative to openjpeg')
 makedepends=('gcc-fortran' 'python' 'python-numpy' 'cmake')
 conflicts=('grib_api' 'libbufr-ecmwf')
 source=(http://software.ecmwf.int/wiki/download/attachments/${_attnum}/${pkgname}-${pkgver}-Source.tar.gz)
-sha256sums=('d88943df0f246843a1a062796edbf709ef911de7269648eef864be259e9704e3')
+sha256sums=('a1d080aed1b17a9d4e3aecccc5a328c057830cd4d54f451f5498b80b24c46404')
 
 build() {
   # sed -i 's/image.inmem_.*=.*1;//' src/grib_jasper_encoding.c
